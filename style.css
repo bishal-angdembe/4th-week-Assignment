@@ -1,0 +1,104 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --body-font: "Chilanka", cursive;
+  --heading-font: "Chilanka", cursive;
+  --secondary-font: "Montserrat", sans-serif;
+}
+/* logo image positioning */
+.logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 34px;
+}
+.logo > img {
+}
+/* navbar */
+.navbar {
+  padding-top: 20px;
+  margin: 0px 12px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+}
+/* gap between left-side icons */
+.left_side_icons {
+  display: flex;
+  gap: 30px;
+  padding-left: 15px;
+  padding-top: 6px;
+}
+.right_side_icon {
+  padding-right: 10px;
+}
+#menu {
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 2px 10px;
+}
+/* banner image- 1 */
+
+.banner_image_1 {
+  overflow: hidden;
+}
+.banner_image_1 > img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.banner_section_1 {
+  padding: 48px 0px;
+}
+.banner_container {
+  padding: 0px 12px;
+}
+.banner_1_text {
+  padding: 48px;
+}
+.banner_1_text > p {
+  margin-bottom: 24px;
+  font-family: var(--secondary-font);
+}
+.banner_1_text > h1 {
+  font-family: var(--heading-font);
+  font-size: 41px;
+  font-weight: 300;
+}
+/* shop now button */
+.button {
+  border: 1px solid black;
+  width: 120px;
+  padding: 9.6px 24px;
+}
+.button > a {
+  text-decoration: none;
+  color: #41403e;
+  padding-top: 0px;
+}
+.button > a > span {
+  color: #41403e;
+}
+.fiber_manual_record {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
+/* logos of animals */
+
+.shop_now_btn > .shop_now {
+  text-decoration: none;
+  color: #41403e;
+  padding-top: 3px;
+}
+.shop_now_btn {
+  border: 1px solid black;
+  display: flex;
+  width: 112px;
+  gap: 5px;
+  padding: 9.6px 24px;
+  border-radius: 5px;
+}
