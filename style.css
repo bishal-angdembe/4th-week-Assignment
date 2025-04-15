@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   padding: 0;
@@ -7,6 +10,7 @@ body {
   --body-font: "Chilanka", cursive;
   --heading-font: "Chilanka", cursive;
   --secondary-font: "Montserrat", sans-serif;
+  --border-radius: 12px;
 }
 /* logo image positioning */
 .logo {
@@ -15,11 +19,10 @@ body {
   padding-top: 32px;
   padding-bottom: 34px;
 }
-.logo > img {
-}
 /* navbar */
 .navbar {
-  padding-top: 20px;
+  padding-top: 12px;
+  padding-bottom: 8px;
   margin: 0px 12px;
   display: flex;
   justify-content: space-between;
@@ -30,8 +33,9 @@ body {
   display: flex;
   gap: 30px;
   padding-left: 15px;
-  padding-top: 6px;
+  padding-top: 12px;
 }
+/* right side icon */
 .right_side_icon {
   padding-right: 10px;
 }
@@ -39,6 +43,31 @@ body {
   border: 1px solid grey;
   border-radius: 8px;
   padding: 2px 10px;
+  font-size: 40px;
+}
+/* hamburger menu */
+.hamburgur_list {
+  position: fixed;
+  top: 170px;
+  right: 0;
+  z-index: 999;
+  width: 150px;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+}
+/* hamburger list */
+.hamburgur_list > li {
+  list-style: none;
+  font-size: 16px;
+  font-family: var(--body-font);
+  padding: 12px 0px;
+  border-bottom: 1px solid #727272;
+  color: #dead6f;
+}
+/* right side items list */
+.right_side_items_list {
+  display: none;
 }
 /* banner image- 1 */
 
@@ -68,37 +97,399 @@ body {
   font-size: 41px;
   font-weight: 300;
 }
-/* shop now button */
-.button {
-  border: 1px solid black;
-  width: 120px;
-  padding: 9.6px 24px;
-}
-.button > a {
-  text-decoration: none;
-  color: #41403e;
-  padding-top: 0px;
-}
-.button > a > span {
-  color: #41403e;
-}
 .fiber_manual_record {
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
-/* logos of animals */
-
+/* icon images section */
+.icon_image {
+  font-size: 100px;
+  color: #dead6f;
+}
+.icon_images_txt {
+  font-family: var(--heading-font);
+  font-size: 24px;
+  padding-top: 5px;
+}
+.icon_images_section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 48px 12px;
+}
+.flex_child_container {
+  padding: 0px 12px;
+}
+/* pet clothing section */
+.pet_clothing_container {
+  padding: 0px 12px;
+}
+.pet_clothing_txt {
+  font-family: var(--heading-font);
+  font-size: 41px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+/* shop now buttom */
 .shop_now_btn > .shop_now {
   text-decoration: none;
   color: #41403e;
-  padding-top: 3px;
+  padding-top: 6px;
 }
 .shop_now_btn {
   border: 1px solid black;
   display: flex;
-  width: 112px;
-  gap: 5px;
-  padding: 9.6px 24px;
+  width: 129px;
+  gap: 1px;
+  padding: 9.6px;
   border-radius: 5px;
+  font-family: var(--body-font);
+  font-size: 16px;
+}
+/* card container section */
+
+/* flexing cloth container */
+.hoodie_cloths_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+/* flexing food container */
+.foodies_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.img_card {
+  width: 300px;
+  height: 273px;
+}
+
+.img_card > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.txt {
+  font-family: var(--body-font);
+  font-size: 22px;
+  padding-top: 24px;
+}
+.rating {
+  font-family: var(--secondary-font);
+  font-size: 16px;
+}
+.price {
+  font-family: var(--secondary-font);
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #dead6f;
+}
+.text_section {
+  padding-left: 16px;
+}
+.cart_btn {
+  font-family: var(--body-font);
+  font-size: 20px;
+  padding: 16px 24px;
+  border: 1px solid black;
+  border-radius: 12px;
+  width: 185px;
+  text-align: center;
+}
+.love_react_btn {
+  font-size: 20px;
+  padding: 16px 24px;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+/* card and love button in same line */
+.card_love_btn_wrapper {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card_container {
+  padding: 24px 0px;
+}
+/* changing rating star color */
+.fa-star {
+  color: #dead6f;
+}
+/* foodies section */
+.pet_foodies_container {
+  padding: 48px 12px;
+  padding-bottom: 0px;
+}
+.pet_foodies_heading {
+  font-family: var(--heading-font);
+  font-size: 36px;
+}
+.foodies_navbar {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+  padding: 0px;
+}
+.foodies_navbar > li {
+  border-bottom: 1px solid black;
+  font-family: var(--body-font);
+  font-size: 17px;
+}
+/* view all products button */
+.view_all_products_btn {
+  border: 1px solid black;
+  display: flex;
+  width: 180px;
+  gap: 5px;
+  padding: 9.6px 12px;
+  border-radius: 5px;
+  margin-left: 155px;
+  margin-bottom: 12px;
+  font-family: var(--body-font);
+  font-size: 16px;
+  background-color: #dead6f;
+}
+.view_all_products_btn > .view_all_products {
+  text-decoration: none;
+  color: #41403e;
+  padding-top: 5px;
+}
+/* best selling products*/
+.pet_clothing_txt {
+  margin-top: 48px;
+}
+/* Registration section */
+.registration_container {
+  padding: 48px 0px;
+  background-color: #ede0d4;
+}
+.register_heading {
+  font-family: var(--heading-font);
+  font-size: 36px;
+  text-align: center;
+  padding-bottom: 8px;
+}
+.form {
+  text-align: center;
+}
+
+.form > input {
+  text-align: center;
+  width: 350px;
+  height: 60px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: var(--body-font);
+  font-size: 1.25rem;
+  /* 1.25 * 16px = 20px*/
+}
+.form > button {
+  text-align: center;
+  width: 350px;
+  height: 44px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 9.6px 24px;
+  background-color: #41403e;
+  color: #fff;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  /* 1rem = 16px*/
+}
+/* icons image section 2 */
+.icon_image_2 {
+  font-size: 100px;
+  color: #dead6f;
+}
+.icon_images_txt_2 {
+  font-family: var(--heading-font);
+  font-size: 24px;
+  padding-top: 5px;
+}
+.icon_images_section_2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 40px;
+
+  padding: 48px 12px;
+}
+.flex_child_container_2 {
+  padding: 0px 12px;
+}
+
+/* footer part */
+.social_media_icon_container {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  margin: 16px 0px;
+  padding: 12px 12px;
+  padding-left: 2px;
+  text-align: left;
+  background-color: #ede0d4;
+  border-radius: 12px;
+}
+.social_media_icon {
+  list-style: none;
+  display: flex;
+  font-size: 25px;
+  margin: 0px;
+  padding-top: 15px;
+  gap: 20px;
+  padding-left: 0px;
+  justify-content: flex-start;
+}
+/* quick links */
+.quick_links_container {
+  font-family: var(--body-font);
+  font-size: 23px;
+}
+.quick_links_list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  gap: 15px;
+}
+.footer_wrapper {
+  padding: 0px 12px;
+}
+/* help center */
+.help_center_container {
+  font-family: var(--body-font);
+  font-size: 23px;
+}
+.help_center_list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  gap: 15px;
+}
+/* background color in banner 1 */
+.banner_container {
+  background-color: #ede0d4;
+}
+/* removing link underline in mobile version */
+.shop_desktop {
+  text-decoration: none;
+  color: #dead6f;
+}
+.home_desktop {
+  text-decoration: none;
+  color: #dead6f;
+}
+/* for desktop UI*/
+@media only screen and (min-width: 992px) {
+  * {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  /* for right side navbar items */
+  .right_side_items_list {
+    display: flex;
+    gap: 20px;
+    padding-left: 0px;
+  }
+  /* styling navbar items of right side */
+  .right_side_items_list > li {
+    list-style: none;
+    font-family: var(--body-font);
+    font-size: 16px;
+    padding: 8px;
+    font-weight: 500;
+  }
+  /* increasing padding of left side icons to match with right side icons */
+  .left_side_icons {
+    padding-top: 23px;
+  }
+  /* hiding hamburgur icon in laptop view */
+  .right_side_icon {
+    display: none;
+  }
+  /* styling banner 1 image */
+  .banner_section_1 {
+    display: flex;
+    margin: 0px 107px;
+    flex-wrap: warp;
+  }
+  .banner_1_text > h1 {
+    font-size: 80px;
+  }
+  /* styling icon image section 1 */
+  .icon_images_section {
+    justify-content: space-around;
+  }
+  /* removing margin-top from pet clothing heading */
+  .pet_clothing_txt {
+    margin-top: 0px;
+  }
+  /* view all products btn */
+  .view_all_products_btn {
+    margin-left: 600px;
+  }
+  /* registration container */
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .register_heading {
+    font-size: 64px;
+  }
+  .form > input {
+    width: 546px;
+    height: 60px;
+  }
+  .form > button {
+    width: 546px;
+    height: 44px;
+    padding: 20px;
+    margin-bottom: 0px;
+  }
+  /* icon images section 2 */
+  .icon_images_section_2 {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  /* flexing footer wrapper */
+  .footer_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .social_media_icon_container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    justify-content: center;
+  }
+  .social_media_icon_container > .text_section {
+    padding: 40px;
+  }
+  /* margin top on best selling product txt */
+  .best_selling_txt {
+    margin-top: 48px;
+  }
+  /* removing link underline */
+  .shop_desktop {
+    text-decoration: none;
+    color: #000000;
+  }
+  .home_desktop {
+    text-decoration: none;
+    color: #000000;
+  }
 }
