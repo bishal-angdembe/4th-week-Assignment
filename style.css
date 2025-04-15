@@ -146,7 +146,6 @@ body {
   font-family: var(--body-font);
   font-size: 16px;
 }
-/* card container section */
 
 /* flexing cloth container */
 .hoodie_cloths_container {
@@ -160,6 +159,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+/* card container section */
 .img_card {
   width: 300px;
   height: 273px;
@@ -235,9 +235,13 @@ body {
   padding: 0px;
 }
 .foodies_navbar > li {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid transparent;
   font-family: var(--body-font);
   font-size: 17px;
+}
+.foodies_navbar > li:hover {
+  color: #dead6f;
+  border-color: #dead6f;
 }
 /* view all products button */
 .view_all_products_btn {
@@ -341,13 +345,14 @@ body {
   margin: 0px;
   padding-top: 15px;
   gap: 20px;
-  padding-left: 0px;
+  padding-left: 20px;
   justify-content: flex-start;
 }
 /* quick links */
 .quick_links_container {
   font-family: var(--body-font);
   font-size: 23px;
+  padding-left: 20px;
 }
 .quick_links_list {
   list-style: none;
@@ -365,7 +370,9 @@ body {
 .help_center_container {
   font-family: var(--body-font);
   font-size: 23px;
+  padding-left: 20px;
 }
+
 .help_center_list {
   list-style: none;
   display: flex;
@@ -411,6 +418,7 @@ body {
     font-size: 16px;
     padding: 8px;
     font-weight: 500;
+    border-bottom: 1px solid transparent;
   }
   /* increasing padding of left side icons to match with right side icons */
   .left_side_icons {
@@ -491,5 +499,9 @@ body {
   .home_desktop {
     text-decoration: none;
     color: #000000;
+  }
+  /* hover effect in right side items navbar */
+  .right_side_items_list > li:hover {
+    border-color: #dead6f;
   }
 }
