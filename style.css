@@ -6,6 +6,10 @@ body {
   padding: 0;
   margin: 0;
 }
+/* reusable container for giving margin in  left and right side to align items in same format  */
+.container {
+  margin: 0px 15px;
+}
 :root {
   --body-font: "Chilanka", cursive;
   --heading-font: "Chilanka", cursive;
@@ -23,7 +27,6 @@ body {
 .navbar {
   padding-top: 12px;
   padding-bottom: 8px;
-  margin: 0px 12px;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid black;
@@ -63,7 +66,7 @@ body {
   font-family: var(--body-font);
   padding: 12px 0px;
   border-bottom: 1px solid #727272;
-  color: #dead6f;
+  color: #000000;
 }
 /* right side items list */
 .right_side_items_list {
@@ -114,15 +117,15 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  justify-content: center;
-  padding: 48px 12px;
+  justify-content: space-between;
+  padding: 48px 0px;
 }
 .flex_child_container {
   padding: 0px 12px;
 }
 /* pet clothing section */
 .pet_clothing_container {
-  padding: 0px 12px;
+  padding: 0px 0px;
 }
 .pet_clothing_txt {
   font-family: var(--heading-font);
@@ -220,7 +223,7 @@ body {
 }
 /* foodies section */
 .pet_foodies_container {
-  padding: 48px 12px;
+  padding: 48px 0px;
   padding-bottom: 0px;
 }
 .pet_foodies_heading {
@@ -320,11 +323,13 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   gap: 40px;
+  align-items: center;
 
-  padding: 48px 12px;
+  padding: 48px 0px;
 }
 .flex_child_container_2 {
-  padding: 0px 12px;
+  padding: 0px 0px;
+  text-align: center;
 }
 
 /* footer part */
@@ -352,7 +357,7 @@ body {
 .quick_links_container {
   font-family: var(--body-font);
   font-size: 23px;
-  padding-left: 20px;
+  padding-left: 0px;
 }
 .quick_links_list {
   list-style: none;
@@ -364,13 +369,13 @@ body {
   gap: 15px;
 }
 .footer_wrapper {
-  padding: 0px 12px;
+  padding: 0px 0px;
 }
 /* help center */
 .help_center_container {
   font-family: var(--body-font);
   font-size: 23px;
-  padding-left: 20px;
+  padding-left: 0px;
 }
 
 .help_center_list {
@@ -389,11 +394,11 @@ body {
 /* removing link underline in mobile version */
 .shop_desktop {
   text-decoration: none;
-  color: #dead6f;
+  color: #000000;
 }
 .home_desktop {
   text-decoration: none;
-  color: #dead6f;
+  color: #000000;
 }
 /* for desktop UI*/
 @media only screen and (min-width: 992px) {
@@ -404,6 +409,10 @@ body {
   body {
     padding: 0;
     margin: 0;
+  }
+  /* reusable container for giving margin in  left and right side to align items in same format  */
+  .container {
+    margin: 0px 100px;
   }
   /* for right side navbar items */
   .right_side_items_list {
@@ -439,11 +448,30 @@ body {
   }
   /* styling icon image section 1 */
   .icon_images_section {
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   /* removing margin-top from pet clothing heading */
   .pet_clothing_txt {
     margin-top: 0px;
+  }
+  /* pet clothing section removing side margins */
+  .pet_clothing_container {
+    padding: 0px 0px;
+  }
+  /* . making hoodie  cloth container items space-between */
+  .hoodie_cloths_container {
+    justify-content: space-between;
+  }
+  /* removing margin from pet foodies container */
+  .pet_foodies_container {
+    padding: 48px 0px;
+    padding-bottom: 0px;
+  }
+  /* making foodies_contaier itmes space-between */
+  .foodies_container {
+    justify-content: space-between;
   }
   /* view all products btn */
   .view_all_products_btn {
@@ -471,12 +499,14 @@ body {
   /* icon images section 2 */
   .icon_images_section_2 {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 48px 0px;
   }
   /* flexing footer wrapper */
   .footer_wrapper {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0px;
   }
   .social_media_icon_container {
     display: flex;
@@ -503,5 +533,9 @@ body {
   /* hover effect in right side items navbar */
   .right_side_items_list > li:hover {
     border-color: #dead6f;
+  }
+  /* flex child container */
+  .flex_child_container_2 {
+    text-align: center;
   }
 }
